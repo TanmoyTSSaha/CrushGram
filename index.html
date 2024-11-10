@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrushGram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        CGBackgroundColor: '#ffeef2',
+                        CGPrimaryColor: '#595758',
+                    },
+                    fontFamily: {
+                        'dancing': ['"Dancing Script"', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Demo styles -->
+    <style>
+        .swiper {
+            width: 100%;
+            height: 80%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* .swiper-slide img {
+            display: block;
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 100vh;
+        } */
+
+        .stack-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .stack-container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 100vh;
+        }
+
+        .stack-container div {
+            position: absolute;
+            top: 11%;
+            left: 11%;
+            width: 7vh;
+            height: 7vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px black dashed;
+            border-radius: 100%;
+            /* padding: 15px 25px; */
+            z-index: -10;
+            color: #595758;
+        }
+
+        .stack-container div p {
+            font-family: 'Dancing Script';
+        }
+
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-button-prev {
+            background-image: url(/assets/icons/arrow-circle-left.svg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center;
+        }
+
+        .swiper-button-next {
+            background-image: url(/assets/icons/arrow-circle-right.svg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center;
+        }
+
+        .swiper-button-next::after {
+            display: none;
+        }
+
+        .swiper-button-prev::after {
+            display: none;
+        }
+
+        .mobile-content {
+            display: block;
+        }
+
+        .desktop-warning {
+            display: none;
+            height: 90vh;
+            width: 90vh;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-content {
+                display: none;
+            }
+
+            .desktop-warning {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-CGBackgroundColor p-4 max-w-screen-sm min-h-screen h-screen mx-auto">
+    <div class="mobile-content max-w-screen-sm min-h-screen h-screen mx-auto flex flex-col gap-6">
+        <h1 class="font-dancing text-4xl font-bold text-CGPrimaryColor text-center">CrushGram</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>1</p>
+                        </div>
+                        <img src="./assets/images/image1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>2</p>
+                        </div>
+                        <img src="./assets/images/image2.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>3</p>
+                        </div>
+                        <img src="./assets/images/image3.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>4</p>
+                        </div>
+                        <img src="./assets/images/image4.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>5</p>
+                        </div>
+                        <img src="./assets/images/image5.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>6</p>
+                        </div>
+                        <img src="./assets/images/image6.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>7</p>
+                        </div>
+                        <img src="./assets/images/image7.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>8</p>
+                        </div>
+                        <img src="./assets/images/image8.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>9</p>
+                        </div>
+                        <img src="./assets/images/image9.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="stack-container">
+                        <div class="text-div">
+                            <p>10</p>
+                        </div>
+                        <img src="./assets/images/image10.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="m359.873 121.377l-22.627 22.627l95.997 95.997H16v32.001h417.24l-95.994 95.994l22.627 22.627L494.498 256z" />
+                </svg></div>
+            <div class="swiper-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M497.333 239.999H80.092l95.995-95.995l-22.627-22.627L18.837 256L153.46 390.623l22.627-22.627l-95.997-95.997h417.243z" />
+                </svg></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+    <div class="desktop-warning">
+        <p>This site is only accessible on mobile devices. Please view it on a mobile screen.</p>
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+     <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+     </script>
+    <script>
+        function checkScreenSize() {
+            if (window.innerWidth <= 768) {
+                document.querySelector('.mobile-content').style.display = 'block';
+                document.getElementById('desktop-warning').style.display = 'none';
+            } else {
+                document.querySelector('.mobile-content').style.display = 'none';
+                document.getElementById('desktop-warning').style.display = 'block';
+            }
+        }
+
+        // Run on load and resize
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+    </script>
+</body>
+
+</html>
